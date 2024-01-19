@@ -1,0 +1,14 @@
+apiVersion: scheduling.k8s.io/v1
+description: This priority class should be used for Cluster Autoscaler pods only.
+kind: PriorityClass
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"scheduling.k8s.io/v1","description":"This priority class should be used for Cluster Autoscaler pods only.","kind":"PriorityClass","metadata":{"annotations":{},"name":"cluster-autoscaler-priority"},"preemptionPolicy":"PreemptLowerPriority","value":1000000000}
+  creationTimestamp: "2024-01-19T03:59:52Z"
+  generation: 1
+  name: cluster-autoscaler-priority
+  resourceVersion: "169620957"
+  uid: a476269b-93d0-4a39-abc9-4cd49db6b2ef
+preemptionPolicy: PreemptLowerPriority
+value: 1000000000
